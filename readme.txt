@@ -13,18 +13,18 @@ avatar.alfredworkflowのメモ
 
 
 動き方：
-コアはhttps://joeschmoe.ioのアバター作成APIを使っています
+コアはjoeschmoeのアバター作成APIを使っています
 APIのリターンからhtmlを作成して表示します
 
 
 開発メモ：
 
 　1.APIを使ってみる
-　　APIはhttps://joeschmoe.ioにありますが、今回使うのは3種類
+　　APIはjoeschmoe.ioサイトにありますが、今回使うのは3種類
 
-　　ランダムアバター　https://joeschmoe.io/api/v1/random
-　　女性アバター　　　https://joeschmoe.io/api/v1/female/xxxxx  (xxxxxは任意の文字)
-　　男性アバター　　　https://joeschmoe.io/api/v1/male/xxxxx  (xxxxxは任意の文字)
+　　ランダムアバター　joeschmoe.io/api/v1/random
+　　女性アバター　　　joeschmoe.io/api/v1/female/xxxxx  (xxxxxは任意の文字)
+　　男性アバター　　　joeschmoe.io/api/v1/male/xxxxx  (xxxxxは任意の文字)
 
 　　キーワードのパラメータをオプションとして、指定がない場合はランダムその他はそのままAPIに渡します
 　
