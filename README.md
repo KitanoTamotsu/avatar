@@ -1,2 +1,0 @@
-# avatar
-Alfred workflow
