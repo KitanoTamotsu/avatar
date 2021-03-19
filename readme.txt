@@ -5,7 +5,7 @@ avatar.alfredworkflowのメモ
 設定：
 1.ワークフローをダウンロード
 2.ファイルをダブルクリックしてワークフローに登録
-3.キーワードavatarを入力
+3.キーワードavatar	を入力
 　以下のパラメータを指定できます
 　パラメータなし　→ ランダムにアバター作成
 　female/xxxx → 女性のアバター作成
@@ -13,18 +13,18 @@ avatar.alfredworkflowのメモ
 
 
 動き方：
-コアはjoeschmoeのアバター作成APIを使っています
+コアはhttps://joeschmoe.ioのアバター作成APIを使っています
 APIのリターンからhtmlを作成して表示します
 
 
 開発メモ：
 
 　1.APIを使ってみる
-　　APIはjoeschmoe.ioサイトにありますが、今回使うのは3種類
+　　APIはhttps://joeschmoe.ioにありますが、今回使うのは3種類
 
-　　ランダムアバター　joeschmoe.io/api/v1/random
-　　女性アバター　　　joeschmoe.io/api/v1/female/xxxxx  (xxxxxは任意の文字)
-　　男性アバター　　　joeschmoe.io/api/v1/male/xxxxx  (xxxxxは任意の文字)
+　　ランダムアバター　https://joeschmoe.io/api/v1/random
+　　女性アバター　　　https://joeschmoe.io/api/v1/female/xxxxx  (xxxxxは任意の文字)
+　　男性アバター　　　https://joeschmoe.io/api/v1/male/xxxxx  (xxxxxは任意の文字)
 
 　　キーワードのパラメータをオプションとして、指定がない場合はランダムその他はそのままAPIに渡します
 　
@@ -69,7 +69,14 @@ APIのリターンからhtmlを作成して表示します
 　　joe schmoeのアバター作成APIを発見して、遊ぶ感じで作成してみました
 
 
+Ver1.1の修正
 
+　 {var:filename}のパスを修正しました。
+　　変更前）　~/documents/joeschmoeavatar.html
+　　変更後）　~/documents/alfred/avatar/joeschmoeavatar.html
+
+   Append to Fileオブジェクトの"Create any intermediate folders"オプションをオンにしました　
+   これによってファイルがない場合（＝初回起動）、ファイルを作成します
 
 
 
