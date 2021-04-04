@@ -69,7 +69,7 @@ APIのリターンからhtmlを作成して表示します
 　　joe schmoeのアバター作成APIを発見して、遊ぶ感じで作成してみました
 
 
-Ver1.1の修正
+Ver1.1(2021-03-20)：
 
 　 {var:filename}のパスを修正しました。
 　　変更前）　~/documents/joeschmoeavatar.html
@@ -77,6 +77,10 @@ Ver1.1の修正
 
    Append to Fileオブジェクトの"Create any intermediate folders"オプションをオンにしました　
    これによってファイルがない場合（＝初回起動）、ファイルを作成します
+
+
+ver1.2(2021-04-04)：
+   シェルスクリプトをbashからzshに変更
 
 
 
