@@ -6,43 +6,40 @@
 <br>　ランダムアバター　https://joeschmoe.io/api/v1/random
 <br>　女性アバター　　　https://joeschmoe.io/api/v1/female/xxxxx  (xxxxxは任意の文字)
 <br>　男性アバター　　　https://joeschmoe.io/api/v1/male/xxxxx  (xxxxxは任意の文字)
-<br>　
-<br>　キーワードのパラメータをオプションとして、指定がない場合はランダムその他はそのままAPIに渡します
+<br>　このアドレスならv1/より後ろの部分をAlfredから入力させればいいかな。
+<br>　指定がない場合はrandomその他は入力の文字列そのまま使う感じ。
 <br>　　
 <br>　cURLで何が返ってくるのかみてみると、svgタグです
 <br>　初めてみましたが、ベクトル描画をするタグのようです
-<br>　なるほど、<svg>タグを返すAPIなので簡単にHTMLにとりこめるのでしょう
-### 2.<SVG>が表示できない
-　ところがAPIからリターンされる<SVG>をqueryとしてOpen URLをしてみても表示されません
+<br>　なるほど、svgタグを返すAPIなので簡単にHTMLにとりこめるのでしょう
+### 2.SVGが表示できない
+　ところがAPIからリターンされるSVGタグのテキストファイルをOpenURLに渡しても表示されません
 <br>　どうしましょう
 ### 3.ローカルファイルを作成する
 　で、考えついたのがローカルファイルを作成すること
 <br>　htmlを作ってオープンすればいけるのかなと
 <br>　
-<br>　スクリプトでリターンされた<SVG>タグをもとにhtmlを作ってみます
-<br>　せっかくhtmlにするので、呼んだときのパラメータと表示させるサイズを埋め込んでいます
+<br>　スクリプトでリターンされたSVGタグをもとにhtmlを作ってみます
+<br>　せっかくhtmlにするので、呼んだときのパラメータの表示と、サイズの設定をしてみました
 <br>　サイズは、sedでwidthとheightをviewBoxの前に入れています
 <br>　最後にcatで全体を{query}として出力します
 <br>　
-<br>　次のステップはWrite Text Fileでローカルファイルを作成します
+<br>　次のステップはWriteTextFileでローカルファイルを作成します
 <br>　このとき作成するファイルはalfredワークフローの環境変数とするとよいでしょう
 <br>　ワークフロー右上の[χ]ボタンを押して登録します
 <br>　nameとしてfilename、valueとして~/documents/joeschmoeavatar.htmlを設定してます
 <br>　　　
-<br>　Write Text Fileステップの設定は簡単です
+<br>　WriteTextFileステップの設定は簡単です
 <br>　filename欄は{var:filename}、書き出す内容は{query}とするだけです
 <br>　if existsはappendとして複数回実施した場合は、リターンを追加するようにしてみました
-<br>　追加するということは使うたびに<HTML>タグが増える形になりますがブラウザで普通に表示できました
+<br>　追加するということは使うたびにHTMLタグが増える形になりますがブラウザで普通に表示できました
 <br>　　　
 <br>　最後は出来上がったhtmlの表示です
-<br>　Open Fileを使いますが、このステップの設定も簡単で、Fileを{var:filename}とするだけです
+<br>　OpenFileを使いますが、このステップの設定も簡単で、Fileを{var:filename}とするだけです
 <br>　前のステップでwriteしたファイルを開いてくれます
-
-
 #### 背景
 　Githubのページに自分の画像を載せれることに気づき何かないかと探していたら
 <br>　joe schmoeのアバター作成APIを発見して、遊ぶ感じで作成してみました
-
 #### 取扱説明
 ### 機能:
 　avatar作成
