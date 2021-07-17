@@ -63,7 +63,8 @@
 <br>　変更前）　~/documents/joeschmoeavatar.html
 <br>　変更後）　~/documents/alfred/avatar/joeschmoeavatar.html
 <br>　
-<br>　Append to Fileオブジェクトの"Create any intermediate folders"オプションをオンにしました　
+<br>　AppendtoFileオブジェクトの"Create any intermediate folders"オプションを
+<br>　オンにしました　
 <br>　これによってファイルがない場合（＝初回起動）、ファイルを作成します
 <br>
 <br>
