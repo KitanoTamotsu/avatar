@@ -45,7 +45,7 @@
 <br>　追加するということは使うたびにHTMLタグが増える形になりますがブラウザで普通に
 <br>　表示できました
 <br>　
-<br>　WriteTextFile
+<br>　WriteTextFile (Append to File)
 <br>　<img width="600"  src="https://user-images.githubusercontent.com/40127279/126859758-1d27c7e7-feed-4692-8cc6-e7de2909fdf8.png">
 <br>　　　
 <br>　最後は出来上がったhtmlの表示です
