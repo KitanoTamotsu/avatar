@@ -1,5 +1,8 @@
 ## 　　Lesson11.　ローカルファイルを利用する 
 #### 開発メモ
+ワークフロー
+<br><img width="600" src="https://user-images.githubusercontent.com/40127279/126859618-eabe4143-8516-4786-a969-543967259814.png">
+
 ### 1.APIを使ってみる
 　APIはhttps://joeschmoe.ioにありますが、今回使うのは3種類
 <br>
@@ -25,20 +28,33 @@
 <br>　サイズは、sedでwidthとheightをviewBoxの前に入れています
 <br>　最後にcatで全体を{query}として出力します
 <br>　
+<br>　ScriptFilter
+<br>　<img width="600" src="https://user-images.githubusercontent.com/40127279/126859716-42760936-ed2d-4e8e-8925-73dcfc3856f9.png">
+<br>　
 <br>　次のステップはWriteTextFileでローカルファイルを作成します
 <br>　このとき作成するファイルはalfredワークフローの環境変数とするとよいでしょう
 <br>　ワークフロー右上の[χ]ボタンを押して登録します
 <br>　nameとしてfilename、valueとして~/documents/joeschmoeavatar.htmlを設定してます
 <br>　　　
+<br>　Configure workflow and variables
+<br>　<img width="600"  src="https://user-images.githubusercontent.com/40127279/126859804-3f3b21d6-f885-41ea-a040-3ee39a7cb397.png">
+<br>　
 <br>　WriteTextFileステップの設定は簡単です
 <br>　filename欄は{var:filename}、書き出す内容は{query}とするだけです
 <br>　if existsはappendとして複数回実施した場合は、リターンを追加するようにしてみました
 <br>　追加するということは使うたびにHTMLタグが増える形になりますがブラウザで普通に
 <br>　表示できました
+<br>　
+<br>　WriteTextFile
+<br>　<img width="600"  src="https://user-images.githubusercontent.com/40127279/126859758-1d27c7e7-feed-4692-8cc6-e7de2909fdf8.png">
 <br>　　　
 <br>　最後は出来上がったhtmlの表示です
 <br>　OpenFileを使いますが、このステップの設定も簡単で、Fileを{var:filename}とするだけです
 <br>　前のステップでwriteしたファイルを開いてくれます
+<br>　
+<br>　OpenFile
+<br>　<img width="600"  src="https://user-images.githubusercontent.com/40127279/126859778-e53421f0-f81e-4a0f-9bcd-1b2110f0ea5b.png">
+
 #### 背景
 　Githubのページに自分の画像を載せれることに気づき何かないかと探していたら
 <br>　joe schmoeのアバター作成APIを発見して、遊ぶ感じで作成してみました
